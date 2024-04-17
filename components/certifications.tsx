@@ -11,11 +11,13 @@ import Image from "next/image";
 
 export default function Certifications() {
   return (
-    <div className="grid grid-cols-3 gap-4">
+    <div className="flex flex-row gap-4">
       {certifications.map((certification, index) => (
-        <Card key={index}>
+        <Card key={index} className="min-w-[400px]">
           <CardHeader>
-            <CardTitle>{certification.title}</CardTitle>
+            <CardTitle>
+              {certification.title}
+            </CardTitle>
             <CardDescription>{certification.description}</CardDescription>
           </CardHeader>
           <CardContent>
