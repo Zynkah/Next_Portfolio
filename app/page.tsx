@@ -3,7 +3,7 @@ import Blog from "@/components/blog-section";
 import Certifications from "@/components/certifications";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
-import ProjectsCarousel from "@/components/projects-carousel";
+import ProjectsCarousel from "@/components/showcase";
 
 export default function Home() {
 
