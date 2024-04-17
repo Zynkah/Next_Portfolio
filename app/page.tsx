@@ -6,6 +6,7 @@ import Header from "@/components/header";
 import ProjectsCarousel from "@/components/projects-carousel";
 
 export default function Home() {
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="space-y-24">
@@ -15,15 +16,15 @@ export default function Home() {
         <div className="my-10">
           <AboutParallax />
           <div className="my-10">
-            <h1>Showcase</h1>
+            <p className="text-4xl font-thin my-4">Showcase</p>
             <ProjectsCarousel />
           </div>
           <div className="my-10">
-            <h1>Certifications</h1>
+            <p className="text-4xl font-thin my-4">Certifications</p>
             <Certifications />
           </div>
           <div className="my-10">
-            <h1>Blog</h1>
+            <p className="text-4xl font-thin my-4">Blog</p>
             <Blog />
           </div>
         </div>
