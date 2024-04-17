@@ -8,9 +8,7 @@ import {
 } from "@/components/ui/card";
 import { certifications } from "@/data/certifications";
 import Image from "next/image";
-import Link from "next/link";
-import { buttonVariants } from "@/components/ui/button";
-import { motion } from "framer-motion";
+
 
 export default function Certifications() {
   return (
@@ -32,15 +30,6 @@ export default function Certifications() {
               />
             </CardContent>
             <CardFooter>
-              {/* <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}> */}
-              <Link
-                className={buttonVariants({ variant: "ghost" })}
-                href={certification.gitHub_url}
-                aria-label={certification.image_alt}
-              >
-                GitHub Repo
-              </Link>
-              {/* </motion.div> */}
             </CardFooter>
           </Card>
         ))}

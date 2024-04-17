@@ -8,7 +8,7 @@ export const certifications = [
       "Nucamp Full Stack Web and Mobile Development Bootcamp Certification",
     image_width: 200,
     image_height: 200,
-    gitHub_url: "https://www.github.com/Zynkah",
+
   },
   {
     title: "Nucamp Backend and DevOps Bootcamp",
@@ -18,6 +18,6 @@ export const certifications = [
     image_alt: "Nucamp Backend and DevOps Bootcamp Certification",
     image_width: 200,
     image_height: 200,
-    gitHub_url: "https://www.github.com/Zynkah",
+
   },
 ];
