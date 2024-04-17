@@ -19,26 +19,31 @@ export default function About() {
         <CardContent>
           <ul className="space-y-4">
             <li>
-              <li className="text-muted-foreground">Programming Languages:</li>
+              <span className="text-muted-foreground">
+                Programming Languages:
+              </span>
+              <br />
               HTML, CSS, JavaScript, Typescript, Python, SQL
             </li>
             <li>
-              <li className="text-muted-foreground">
+              <span className="text-muted-foreground">
                 Frameworks and Libraries:
-              </li>
+              </span>
+              <br />
               React, React Native, Bootstrap, MaterialUI, NextUI, Next.js,
               Prisma, Node.js, Express, TailwindCSS
             </li>
             <li>
-              <li className="text-muted-foreground">Databases:</li> MongoDB,
-              PostgreSQL, NeonDB, Drizzle ORM
+              <span className="text-muted-foreground">Databases:</span>
+              <br /> MongoDB, PostgreSQL, NeonDB, Drizzle ORM
             </li>
             <li>
-              <li className="text-muted-foreground">DevOps:</li> AWS, Google
-              Cloud, Microsoft Azure
+              <span className="text-muted-foreground">DevOps:</span>
+              <br /> AWS, Google Cloud, Microsoft Azure
             </li>
             <li>
-              <li className="text-muted-foreground">Tools:</li>
+              <span className="text-muted-foreground">Tools:</span>
+              <br />
               Git, GitHub, Visual Studio Code, Docker, Postman, Insomnia
             </li>
           </ul>
