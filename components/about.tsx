@@ -10,8 +10,8 @@ import {
 
 export default function About() {
   return (
-    <div className="flex md:flex-row flex-col gap-4">
-      <Card className="md:basis-2/3">
+    <div className="flex lg:flex-row flex-col gap-4">
+      <Card className="lg:basis-2/3">
         <CardHeader>
           <CardTitle>Junior Software Engineer</CardTitle>
           <CardDescription></CardDescription>
@@ -56,7 +56,7 @@ export default function About() {
         width={400}
         height={400}
         alt="Picture of the author"
-        className="rounded-lg md:basis-1/3"
+        className="rounded-lg lg:basis-1/3"
       />
     </div>
   );
