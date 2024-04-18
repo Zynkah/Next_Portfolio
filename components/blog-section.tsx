@@ -28,7 +28,7 @@ export default function Blog() {
       <CarouselContent>
         {blogs.map((blog, index) => (
           <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-            <Card className="w-fit">
+            <Card>
               <Image
                 src={blog.image}
                 width={blog.image_width}

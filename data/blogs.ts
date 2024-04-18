@@ -5,8 +5,8 @@ export const blogs = [
     image:
       "https://fastly.picsum.photos/id/101/200/200.jpg?hmac=8aiHS9K78DvBexQ7ZROLuLizDR22o8CcjRMUhHbZU6g",
     image_alt: "Blog 1",
-    image_height: 250,
-    image_width: 250,
+    image_height: 400,
+    image_width: 400,
     link: "/blog1",
   },
   {
@@ -15,8 +15,8 @@ export const blogs = [
     image:
       "https://fastly.picsum.photos/id/249/200/200.jpg?hmac=75zqoHvrxGGVnJnS8h0gUzZ3zniIk6PggG38GjmyOto",
     image_alt: "Blog 2",
-    image_height: 250,
-    image_width: 250,
+    image_height: 400,
+    image_width: 400,
     link: "/blog2",
   },
   {
@@ -25,8 +25,8 @@ export const blogs = [
     image:
       "https://fastly.picsum.photos/id/293/200/200.jpg?hmac=6YL5khsW332VGbJLkqIfYLzyXyT1kj358PA64TJtKuw",
     image_alt: "Blog 3",
-    image_height: 250,
-    image_width: 250,
+    image_height: 400,
+    image_width: 400,
     link: "/blog3",
   },
   {
@@ -35,8 +35,8 @@ export const blogs = [
     image:
       "https://fastly.picsum.photos/id/102/200/200.jpg?hmac=mLVQr0-wbZ-PRSf_R4oFkUDR7yfIKqT3F8pfJNFZKc0",
     image_alt: "Blog 4",
-    image_height: 250,
-    image_width: 250,
+    image_height: 400,
+    image_width: 400,
     link: "/blog4",
   },
 ];
