@@ -58,7 +58,6 @@ export default function ProjectsCarousel() {
                     width={project.image_width}
                     height={project.image_height}
                     alt={project.image_alt}
-                    layout="intrinsic"
                     className="rounded-lg hover:opacity-80 transition-opacity duration-300 ease-in-out"
                   />
                 </Link>

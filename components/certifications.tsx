@@ -24,7 +24,6 @@ export default function Certifications() {
               width={certification.image_width}
               height={certification.image_height}
               alt={certification.image_alt}
-              layout="intrinsic"
               className="rounded-lg"
             />
           </CardContent>
