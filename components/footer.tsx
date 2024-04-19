@@ -1,14 +1,17 @@
+"use client";
+
 import { Button, buttonVariants } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
   DialogDescription,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
 import Link from "next/link";
+import { Github, Twitch, LinkedinIcon } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
 
 export default function Footer() {
   return (
@@ -20,41 +23,50 @@ export default function Footer() {
           rel="noopener noreferrer"
           className={buttonVariants({ variant: "outline" })}
         >
-          See me code
+          See Me Code
         </Link>
         <Dialog>
           <DialogTrigger asChild>
             <Button variant="outline">Contact Me</Button>
           </DialogTrigger>
-          <DialogContent>
-            <DialogHeader>
-              <DialogTitle>Follow my links to contact me</DialogTitle>
-              <DialogDescription>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </DialogDescription>
-            </DialogHeader>
-            <DialogFooter className="flex flow-row gap-1 justify-end">
-              <Link
-                href="https://github.com/Zynkah"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={buttonVariants({ variant: "outline" })}
-              >
-                GitHub
-              </Link>
-              <br />
-              <Link
-                href="https://www.linkedin.com/in/zena-creps-ba3631232/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={buttonVariants({ variant: "outline" })}
-              >
-                LinkedIn
-              </Link>
-            </DialogFooter>
+          <DialogContent className="flex h-[275px]">
+            <div className="basis-1/2 my-auto">
+              <DialogHeader>
+                <DialogTitle className="text-4xl font-thin">
+                  Zena Creps
+                </DialogTitle>
+                <DialogDescription>Web Developer</DialogDescription>
+              </DialogHeader>
+            </div>
+            <Separator orientation="vertical" className="font-bold h-auto" />
+            <div className="basis-1/2 my-auto">
+              <div className="flex flex-col">
+                <Link
+                  href="https://github.com/Zynkah"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={buttonVariants({ variant: "ghost" })}
+                >
+                  <Github className="mr-2" /> GitHub
+                </Link>
+                <Link
+                  href="https://www.linkedin.com/in/zena-creps-ba3631232/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={buttonVariants({ variant: "ghost" })}
+                >
+                  <LinkedinIcon className="mr-2" /> LinkedIn
+                </Link>
+                <Link
+                  href="https://www.twitch.tv/zynkah/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={buttonVariants({ variant: "ghost" })}
+                >
+                  <Twitch className="mr-2" /> Twitch
+                </Link>
+              </div>
+            </div>
           </DialogContent>
         </Dialog>
       </div>
