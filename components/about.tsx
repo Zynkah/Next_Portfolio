@@ -56,6 +56,7 @@ export default function About() {
         width={400}
         height={400}
         alt="Picture of the author"
+        layout="intrinsic"
         className="rounded-lg lg:basis-1/3"
       />
     </div>

@@ -28,26 +28,29 @@ export default function Blog() {
       <CarouselContent>
         {blogs.map((blog, index) => (
           <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-            <Card>
+            <Card className="flex flex-col w-fit">
               <Image
                 src={blog.image}
                 width={blog.image_width}
                 height={blog.image_height}
                 alt={blog.image_alt}
+                layout="intrinsic"
                 className="rounded-lg rounded-b-none"
               />
-              <CardHeader>
-                <CardTitle>{blog.title}</CardTitle>
-                <CardDescription>{blog.description}</CardDescription>
-              </CardHeader>
-              {/* <CardContent>
+              <>
+                <CardHeader>
+                  <CardTitle>{blog.title}</CardTitle>
+                  <CardDescription>{blog.description}</CardDescription>
+                </CardHeader>
+                {/* <CardContent>
             
                 </CardContent> */}
-              <CardFooter className="justify-end">
-                <Link href={blog.link} aria-label={blog.image_alt}>
-                  Read More →
-                </Link>
-              </CardFooter>
+                <CardFooter className="justify-end">
+                  <Link href={blog.link} aria-label={blog.image_alt}>
+                    Read More →
+                  </Link>
+                </CardFooter>
+              </>
             </Card>
           </CarouselItem>
         ))}
