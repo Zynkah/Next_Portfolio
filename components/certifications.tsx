@@ -11,23 +11,17 @@ import Image from "next/image";
 
 export default function Certifications() {
   return (
-    <div className="flex md:flex-row flex-col gap-4">
+    <div className="flex lg:flex-row flex-col gap-4">
       {certifications.map((certification, index) => (
         <Card key={index}>
-          <CardHeader>
-            <CardTitle>{certification.title}</CardTitle>
-            <CardDescription>{certification.description}</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <Image
-              src={certification.image}
-              width={certification.image_width}
-              height={certification.image_height}
-              alt={certification.image_alt}
-              className="rounded-lg"
-            />
-          </CardContent>
-          <CardFooter></CardFooter>
+          <Image
+            src={certification.image}
+            width={certification.image_width}
+            height={certification.image_height}
+            alt={certification.image_alt}
+            priority
+            className="rounded-lg"
+          />
         </Card>
       ))}
     </div>

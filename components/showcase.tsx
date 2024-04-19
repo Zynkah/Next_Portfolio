@@ -40,8 +40,16 @@ export default function ProjectsCarousel() {
       <CarouselPrevious />
       <CarouselContent>
         {projects.map((project: ProjectType, index: number) => (
-          <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-            <Card className="w-fit h-[500px] relative">
+          <CarouselItem key={index} className="lg:basis-1/2 xl:basis-1/3">
+            <Card className="relative w-fit lg:h-[500px] sm:h-[550px] h-[450px]">
+              <Image
+                src={project.image}
+                width={project.image_width}
+                height={project.image_height}
+                alt={project.image_alt}
+                priority
+                className="rounded-lg hover:opacity-80 transition-opacity duration-300 ease-in-out"
+              />
               <CardHeader>
                 <CardTitle>{project.title}</CardTitle>
                 <CardDescription>{project.description}</CardDescription>
@@ -52,15 +60,7 @@ export default function ProjectsCarousel() {
                   aria-label={project.image_alt}
                   target="_blank"
                   rel="noopener noreferrer"
-                >
-                  <Image
-                    src={project.image}
-                    width={project.image_width}
-                    height={project.image_height}
-                    alt={project.image_alt}
-                    className="rounded-lg hover:opacity-80 transition-opacity duration-300 ease-in-out"
-                  />
-                </Link>
+                ></Link>
               </CardContent>
               <CardFooter className="absolute bottom-0 right-0">
                 <Link
