@@ -7,7 +7,6 @@ import {
 } from "@/components/ui/carousel";
 import {
   Card,
-  CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
@@ -27,23 +26,21 @@ export default function Blog() {
     >
       <CarouselContent>
         {blogs.map((blog, index) => (
-          <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-            <Card>
+          <CarouselItem key={index} className="lg:basis-1/2 xl:basis-1/3">
+            <Card className="relative w-fit lg:h-[500px] sm:h-[550px] h-[450px]">
               <Image
                 src={blog.image}
                 width={blog.image_width}
                 height={blog.image_height}
                 alt={blog.image_alt}
+                priority
                 className="rounded-lg rounded-b-none"
               />
               <CardHeader>
                 <CardTitle>{blog.title}</CardTitle>
                 <CardDescription>{blog.description}</CardDescription>
               </CardHeader>
-              {/* <CardContent>
-            
-                </CardContent> */}
-              <CardFooter className="justify-end">
+              <CardFooter className="absolute bottom-0 right-0">
                 <Link href={blog.link} aria-label={blog.image_alt}>
                   Read More →
                 </Link>

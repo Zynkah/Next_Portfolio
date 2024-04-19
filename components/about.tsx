@@ -10,8 +10,8 @@ import {
 
 export default function About() {
   return (
-    <div className="flex lg:flex-row flex-col gap-4">
-      <Card className="lg:basis-2/3">
+    <Card className="flex lg:flex-row flex-col overflow-hidden">
+      <div className="lg:flex-2 flex-1 z-10">
         <CardHeader>
           <CardTitle>Junior Software Engineer</CardTitle>
           <CardDescription></CardDescription>
@@ -48,16 +48,16 @@ export default function About() {
             </li>
           </ul>
         </CardContent>
-        <CardFooter></CardFooter>
-      </Card>
-
-      <Image
-        src="https://fastly.picsum.photos/id/841/200/200.jpg?hmac=jAPzaXgN_B37gVuIQvmtuRCmYEC0lJP86OZexH1yam4"
-        width={400}
-        height={400}
-        alt="Picture of the author"
-        className="rounded-lg lg:basis-1/3"
-      />
-    </div>
+      </div>
+      <div className="flex-0">
+        <Image
+          src="https://fastly.picsum.photos/id/841/200/200.jpg?hmac=jAPzaXgN_B37gVuIQvmtuRCmYEC0lJP86OZexH1yam4"
+          width={400}
+          height={400}
+          alt="Picture of the author"
+          className="lg:rounded-bl-full lg:top-0 lg:right-0  hidden lg:block"
+        />
+      </div>
+    </Card>
   );
 }
