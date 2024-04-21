@@ -41,7 +41,12 @@ export default function Blog() {
                 <CardDescription>{blog.description}</CardDescription>
               </CardHeader>
               <CardFooter className="absolute bottom-0 right-0">
-                <Link href={blog.link} aria-label={blog.image_alt}>
+                <Link
+                  href={blog.link}
+                  aria-label={blog.image_alt}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Read More →
                 </Link>
               </CardFooter>

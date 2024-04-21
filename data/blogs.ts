@@ -1,5 +1,16 @@
 export const blogs = [
   {
+    title: "Building an Achievements Carousel with React",
+    description:
+      "Create an infinite scrolling carousel of images with a text-overlay.",
+    image:
+      "https://fastly.picsum.photos/id/119/3264/2176.jpg?hmac=PYRYBOGQhlUm6wS94EkpN8dTIC7-2GniC3pqOt6CpNU",
+    image_alt: "Blog 2",
+    image_height: 700,
+    image_width: 700,
+    link: "https://zynkah.substack.com/p/building-an-achievements-carousel",
+  },
+    {
     title: "Responsive Images in Next.js",
     description: "What the documents don't tell you",
     image:
@@ -8,16 +19,6 @@ export const blogs = [
     image_height: 700,
     image_width: 700,
     link: "https://zynkah.substack.com/p/mastering-responsive-images-in-nextjs",
-  },
-  {
-    title: "Blog 2",
-    description: "This is a description of blog 2",
-    image:
-      "https://fastly.picsum.photos/id/119/3264/2176.jpg?hmac=PYRYBOGQhlUm6wS94EkpN8dTIC7-2GniC3pqOt6CpNU",
-    image_alt: "Blog 2",
-    image_height: 700,
-    image_width: 700,
-    link: "/blog2",
   },
   {
     title: "Blog 3",
