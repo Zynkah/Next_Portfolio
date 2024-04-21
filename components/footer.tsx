@@ -15,7 +15,7 @@ import { Separator } from "@/components/ui/separator";
 
 export default function Footer() {
   return (
-    <div className="fixed bottom-0 right-0 w-full bg-slate-500 py-8">
+    <div className="fixed bottom-0 right-0 w-full bg-slate-500 py-4">
       <div className="flex flex-row mx-24 text-xl md:gap-10 gap-6 md:justify-end justify-center">
         <Link
           href="https://www.twtich.tv/Zynkah"

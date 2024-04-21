@@ -48,7 +48,7 @@ export default function ProjectsCarousel() {
                 height={project.image_height}
                 alt={project.image_alt}
                 priority
-                className="rounded-lg hover:opacity-80 transition-opacity duration-300 ease-in-out"
+                className="rounded-lg rounded-b-none hover:opacity-80 transition-opacity duration-300 ease-in-out"
               />
               <CardHeader>
                 <CardTitle>{project.title}</CardTitle>
