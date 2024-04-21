@@ -1,5 +1,5 @@
 export const projects = [
-    {
+  {
     title: "Final Fantasy X Fan Site",
     description: "Next.js, NextUI",
     image: "/image/FFX.png",
@@ -29,7 +29,7 @@ export const projects = [
     link: "https://blog-ten-psi-89.vercel.app/",
     git_hub_link: "https://github.com/Zynkah/Blog",
   },
-    {
+  {
     title: "React.js Portfolio",
     description: "React.js, Material UI",
     image: "/image/Portfolio.png",
@@ -52,8 +52,7 @@ export const projects = [
   {
     title: "Chose Your Own Adventure Game",
     description: "Python",
-    image:
-      "https://fastly.picsum.photos/id/0/5000/3333.jpg?hmac=_j6ghY5fCfSD6tvtcV74zXivkJSPIfR9B8w34XeQmvU",
+    image: "/image/StonesEdge.png",
     image_alt: "Stone-Edge",
     image_height: 700,
     image_width: 700,
