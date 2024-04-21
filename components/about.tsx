@@ -13,7 +13,7 @@ export default function About() {
     <Card className="flex flex-col overflow-hidden">
       {/* <div className="lg:flex-2 flex-1 z-10"> */}
         <CardHeader>
-          <CardTitle>Junior Software Engineer</CardTitle>
+          <CardTitle>My Tech Stack</CardTitle>
           <CardDescription></CardDescription>
         </CardHeader>
         <CardContent>

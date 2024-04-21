@@ -18,7 +18,7 @@ export default function Footer() {
     <div className="fixed bottom-0 right-0 w-full bg-slate-500 py-4">
       <div className="flex flex-row mx-24 text-xl md:gap-10 gap-6 md:justify-end justify-center">
         <Link
-          href="https://www.twtich.tv/Zynkah"
+          href="https://www.twitch.tv/Zynkah"
           target="_blank"
           rel="noopener noreferrer"
           className={buttonVariants({ variant: "outline" })}
@@ -35,7 +35,7 @@ export default function Footer() {
                 <DialogTitle className="text-4xl font-thin">
                   Zena Creps
                 </DialogTitle>
-                <DialogDescription>Web Developer</DialogDescription>
+                <DialogDescription>Software Engineer</DialogDescription>
               </DialogHeader>
             </div>
             <Separator orientation="vertical" className="font-bold h-auto" />
