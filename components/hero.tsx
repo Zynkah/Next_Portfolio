@@ -2,22 +2,46 @@
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Hero() {
-  const spring = {
-    type: "spring",
-    damping: 10,
-    stiffness: 100,
+  const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 10 },
+    visible,
   };
+
   return (
-    <>
-      <AnimatePresence>
-              <motion.div
-                transition={spring}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                style={{}}>
-                  </motion.div>
-      </AnimatePresence>
-    </>
+    <AnimatePresence>
+      <motion.article
+        initial="hidden"
+        animate="visible"
+        exit={{ opacity: 0, transition: { duration: 1 } }}
+        variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
+      >
+        <motion.h1
+          variants={{
+            hidden: { opacity: 0, y: -100 },
+            visible,
+          }}
+          className="text-center text-6xl sm:text-8xl lg:text-9xl font-bold"
+          //   style={{ fontSize: "clamp(3vw, 100px, 200px)" }}
+        >
+          Developer
+        </motion.h1>
+        <ul className="text-center space-y-6 mt-6">
+          <motion.li
+            variants={itemVariants}
+            className="text-3xl text-muted-foreground"
+          >
+            Content Creator
+          </motion.li>
+          <motion.li
+            variants={itemVariants}
+            className="text-xl text-muted-foreground"
+          >
+            Cookie Guardian
+          </motion.li>
+        </ul>
+      </motion.article>
+    </AnimatePresence>
   );
 }
