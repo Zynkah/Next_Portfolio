@@ -12,22 +12,27 @@ import {
 import Link from "next/link";
 import { Github, Twitch, LinkedinIcon } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
     <div className="fixed bottom-0 right-0 w-full bg-slate-500 py-4">
       <div className="flex flex-row mx-24 text-xl md:gap-10 gap-6 md:justify-end justify-center">
-        <Link
-          href="https://www.twitch.tv/Zynkah"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={buttonVariants({ variant: "outline" })}
-        >
-          See Me Code
-        </Link>
+        <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
+          <Link
+            href="https://www.twitch.tv/Zynkah"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={buttonVariants({ variant: "outline" })}
+          >
+            See Me Code
+          </Link>
+        </motion.div>
         <Dialog>
           <DialogTrigger asChild>
-            <Button variant="outline">Contact Me</Button>
+            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }} >
+              <Button variant="outline">Contact Me</Button>
+              </motion.div>
           </DialogTrigger>
           <DialogContent className="flex h-[275px]">
             <div className="basis-1/2 my-auto">
