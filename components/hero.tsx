@@ -1,4 +1,5 @@
 "use client";
+
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Hero() {
@@ -23,9 +24,8 @@ export default function Hero() {
             visible,
           }}
           className="text-center text-6xl sm:text-8xl lg:text-9xl font-bold"
-          //   style={{ fontSize: "clamp(3vw, 100px, 200px)" }}
         >
-          Developer
+          Web Developer
         </motion.h1>
         <ul className="text-center space-y-6 mt-6">
           <motion.li
@@ -38,7 +38,7 @@ export default function Hero() {
             variants={itemVariants}
             className="text-xl text-muted-foreground"
           >
-            Cookie Guardian
+            Game Enthusiast
           </motion.li>
         </ul>
       </motion.article>
