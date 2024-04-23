@@ -1,10 +1,5 @@
 import {
   Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
 import { certifications } from "@/data/certifications";
 import Image from "next/image";
