@@ -10,7 +10,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import Link from "next/link";
-import { Github, Twitch, LinkedinIcon } from "lucide-react";
+import { Github, Twitch, LinkedinIcon, Mail } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { motion } from "framer-motion";
 
@@ -30,9 +30,9 @@ export default function Footer() {
         </motion.div>
         <Dialog>
           <DialogTrigger asChild>
-            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }} >
+            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
               <Button variant="outline">Contact Me</Button>
-              </motion.div>
+            </motion.div>
           </DialogTrigger>
           <DialogContent className="flex h-[275px]">
             <div className="basis-1/2 my-auto">
@@ -69,6 +69,14 @@ export default function Footer() {
                   className={buttonVariants({ variant: "ghost" })}
                 >
                   <Twitch className="mr-2" /> Twitch
+                </Link>
+                <Link
+                  href="/contact-form"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={buttonVariants({ variant: "ghost" })}
+                >
+                  <Mail className="mr-2" /> Email
                 </Link>
               </div>
             </div>
