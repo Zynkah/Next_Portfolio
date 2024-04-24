@@ -10,7 +10,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between md:p-24 py-24">
       <div className="space-y-24 my-10 md:mt-0 w-4/5">
         <div className="my-16">
-          <div className="my-56">
+          <div className="my-24 xl:my-56">
             <Hero />
           </div>
           <p className="text-4xl font-thin my-4">About Me</p>
