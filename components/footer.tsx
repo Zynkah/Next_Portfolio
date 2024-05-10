@@ -16,7 +16,7 @@ import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
-    <div className="fixed bottom-0 right-0 w-full bg-slate-500 py-4">
+    <div className="fixed bottom-0 right-0 w-full bg-slate-800 py-2">
       <div className="flex flex-row mx-24 text-xl md:gap-10 gap-6 md:justify-end justify-center">
         <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
           <Link

@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Hero() {
-  const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
+  const visible = { opacity: 1, y: 0, transition: { duration: 0.8 } };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 10 },
@@ -25,7 +25,7 @@ export default function Hero() {
           }}
           className="text-center text-6xl sm:text-8xl lg:text-9xl font-bold"
         >
-          Web Developer
+          Frontend Software Engineer
         </motion.h1>
         <ul className="text-center space-y-6 mt-6">
           <motion.li
