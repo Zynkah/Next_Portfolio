@@ -23,7 +23,7 @@ export default function Footer() {
             href="https://www.twitch.tv/Zynkah"
             target="_blank"
             rel="noopener noreferrer"
-            className={buttonVariants({ variant: "outline" })}
+            className={`${buttonVariants({ variant: "outline" })} hover:bg-slate-950`}
           >
             See Me Code
           </Link>
@@ -31,7 +31,12 @@ export default function Footer() {
         <Dialog>
           <DialogTrigger asChild>
             <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
-              <Button variant="outline">Contact Me</Button>
+              <Button
+                variant="outline"
+                className="hover:bg-slate-950"
+              >
+                Contact Me
+              </Button>
             </motion.div>
           </DialogTrigger>
           <DialogContent className="flex h-[275px]">
@@ -45,7 +50,7 @@ export default function Footer() {
             </div>
             <Separator orientation="vertical" className="font-bold h-auto" />
             <div className="basis-1/2 my-auto">
-              <div className="flex flex-col">
+              <div className="flex flex-col items-center">
                 <Link
                   href="https://github.com/Zynkah"
                   target="_blank"
