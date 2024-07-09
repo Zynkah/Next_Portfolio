@@ -2,13 +2,13 @@ export const projects = [
   {
     title: "Final Fantasy X Site",
     description:
-      "Built with the Next.js Framework, designed with NextUI library, animations created with Framer Motion, hosted and data stored on Vercel.",
+      "Built with the Next.js Framework, designed with Tailwind CSS UI library, animations created with Framer Motion, hosted and data stored on Vercel. This website is a Final Fantasy Wiki. I utillized shadCN component library, in which I customize myself.",
     image: "/image/FFX.png",
     image_alt: "FFX Fan Site",
     image_height: 700,
     image_width: 700,
-    link: "https://final-fantasy-x.vercel.app/",
-    git_hub_link: "https://github.com/Zynkah/FFX_Next.js",
+    link: "https://ffx-v2.vercel.app/",
+    git_hub_link: "https://github.com/Zynkah/FFX_V2",
   },
   {
     title: "Maid Cafe",
@@ -23,7 +23,8 @@ export const projects = [
   },
   {
     title: "Adventure Game",
-    description: "Chose your own adventure game using Python. You can play in the terminal a game of chance. Using Ascii art to give it a fun look, play this retro style game to see if you would make it till the end.",
+    description:
+      "Chose your own adventure game using Python. You can play in the terminal a game of chance. Using Ascii art to give it a fun look, play this retro style game to see if you would make it till the end.",
     image: "/image/StonesEdge.png",
     image_alt: "Stone-Edge",
     image_height: 700,

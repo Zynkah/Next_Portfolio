@@ -32,23 +32,6 @@ const Section = ({ project }: { project: ProjectType }) => (
     // transition={{ duration: 0.5 }}
     className="flex flex-row items-center gap-20"
   >
-    <div className="flex flex-col basis-1/2">
-      <div className="flex flex-row space-x-2 text-nowrap hero-text text-3xl">
-        <h2>{project.title}</h2>
-      </div>
-      <p className="text-base leading-6 font-gohu font-medium text-justify">
-        {project.description}
-      </p>
-      <Link
-        href={project.git_hub_link}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={project.image_alt}
-      >
-        GitHub Repository →
-      </Link>
-    </div>
-
     <div className="basis-1/2">
       <Link
         href={project.link}
@@ -64,6 +47,22 @@ const Section = ({ project }: { project: ProjectType }) => (
           priority
           className="rounded-lg hover:opacity-80 transition-opacity duration-300 ease-in-out"
         />
+      </Link>
+    </div>
+    <div className="flex flex-col basis-1/2">
+      <div className="flex flex-row space-x-2 text-nowrap hero-text text-3xl">
+        <h2>{project.title}</h2>
+      </div>
+      <p className="text-base leading-6 font-gohu font-medium text-justify">
+        {project.description}
+      </p>
+      <Link
+        href={project.git_hub_link}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={project.image_alt}
+      >
+        GitHub Repository →
       </Link>
     </div>
   </motion.div>
