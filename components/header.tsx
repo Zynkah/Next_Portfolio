@@ -6,7 +6,9 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-md shadow-md border-b border-accent flex items-center justify-between px-8 py-3">
       <nav className="flex items-center gap-6">
         <Link
-          href="/"
+          href="https://github.com/Zynkah"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-xl font-bold text-primary drop-shadow-md hover:text-accent transition-colors duration-200"
         >
           Zynkah
