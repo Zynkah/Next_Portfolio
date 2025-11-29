@@ -16,7 +16,7 @@ import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
-    <div className="fixed bottom-0 right-0 w-full bg-primary py-2">
+    <footer className="sticky bottom-0 z-50 w-full bg-background/80 backdrop-blur-md shadow-md border-t border-accent py-2">
       <div className="flex flex-row mx-24 text-xl md:gap-10 gap-6 md:justify-end justify-center">
         <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
           <Link
@@ -90,6 +90,6 @@ export default function Footer() {
           </DialogContent>
         </Dialog>
       </div>
-    </div>
+    </footer>
   );
 }

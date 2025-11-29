@@ -33,7 +33,7 @@ export default function AchivementsCarousel() {
   }, [xTranslation, width]);
 
   return (
-    <Card className="relative max-w-full h-[300px] border-none overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_25px,_black_calc(100%-25px),transparent_100%)]">
+    <Card className="relative max-w-full h-[300px] border-none shadow-lg backdrop-blur-md rounded-xl overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_25px,_black_calc(100%-25px),transparent_100%)] font-mulish">
       <motion.div
         className="absolute left-0 flex gap-4"
         ref={ref}
@@ -46,7 +46,7 @@ export default function AchivementsCarousel() {
             onMouseLeave={() => setHoveredIndex(null)}
             className="relative"
           >
-            <Card className="relative overflow-hidden h-[300px] w-[300px] text-nowrap border-none ">
+            <Card className="relative overflow-hidden h-[300px] w-[300px] bg-card/80 border border-accent shadow-lg backdrop-blur-md rounded-xl text-nowrap font-mulish">
               <AnimatePresence>
                 {hoveredIndex === index && (
                   <motion.div
@@ -60,7 +60,7 @@ export default function AchivementsCarousel() {
                       initial={{ y: 10 }}
                       animate={{ y: 0 }}
                       exit={{ y: 10 }}
-                      className="bg-white text-md z-10 px-3 py-2 rounded-lg flex items-center ga-[0.5ch] hover"
+                      className="bg-white text-lg font-bold z-10 px-3 py-2 rounded-lg flex items-center gap-[0.5ch] hover tracking-wide font-mulish"
                     >
                       <span className="text-primary-foreground text-wrap text-center">
                         {achievement.title}
