@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import AnimatedLayout from "@/components/animated-layout";
 
 const mulish = Mulish({ subsets: ["latin"] });
 
@@ -26,8 +27,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header />   
+          <Header />
+          <AnimatedLayout>
             {children}
+          </AnimatedLayout>
           <Footer />
         </ThemeProvider>
       </body>
