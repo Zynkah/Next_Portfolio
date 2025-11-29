@@ -39,7 +39,7 @@ export default function Hero() {
         className="absolute inset-0 w-full h-full z-0 blur-3xl opacity-5"
       />
       <AnimatePresence>
-        <Card className="md:w-full xl:max-w-[1280px] max-w-[900px] z-10 p-4">
+        <Card className="lg:w-full xl:max-w-[1280px] max-w-[900px] z-10 px-16 py-8">
           <motion.article
             initial="hidden"
             animate="visible"
@@ -52,7 +52,7 @@ export default function Hero() {
                 hidden: { opacity: 0, y: -100 },
                 visible,
               }}
-              className="text-center text-6xl sm:text-8xl xl:text-9xl font-bold"
+              className="text-center md:text-5xl lg:text-7xl font-bold"
             >
               Software Engineer
             </motion.h1>
