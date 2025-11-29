@@ -30,7 +30,6 @@ const Section = ({ project }: { project: ProjectType }) => (
         width={project.image_width}
         height={project.image_height}
         alt={project.image_alt}
-        priority
         className="rounded-lg w-full object-cover hover:opacity-80 transition-opacity duration-300 ease-in-out "
       />
       {/* Overlay text */}

@@ -2,7 +2,7 @@ export const projects = [
   {
     title: "Final Fantasy X Site",
     description:
-      "Next.js Framework,Tailwind CSS UI library, Framer Motion, hosted and data stored on Vercel.",
+      "Next.js Framework, Tailwind CSS UI library, Framer Motion, hosted and data stored on Vercel.",
     image: "/image/FFX.png",
     image_alt: "FFX Fan Site",
     image_height: 700,
@@ -13,7 +13,7 @@ export const projects = [
   {
     title: "Maid Cafe",
     description:
-      "React.js, Node.js, Express.js,  Material UI. Data stored with MongoDB. Hosted on Vercel.",
+      "React.js, Node.js, Express.js, Material UI. Data stored with MongoDB. Hosted on Vercel.",
     image: "/image/MaidCafe.png",
     image_alt: "Maid Cafe",
     image_height: 700,
@@ -24,7 +24,7 @@ export const projects = [
   {
     title: "Adventure Game",
     description:
-      "Chose your own adventure game using Python. You can play in the terminal.",
+      "Choose your own adventure game using Python. You can play in the terminal.",
     image: "/image/StonesEdge.png",
     image_alt: "Stone-Edge",
     image_height: 700,
@@ -34,7 +34,7 @@ export const projects = [
   },
   {
     title: "Zyntendo",
-    description: "HTML, CSS, Canvas API. Hosted on Neltify.",
+    description: "HTML, CSS, Canvas API. Hosted on Netlify.",
     image: "/image/Zyntendo.png",
     image_alt: "Zyntendo",
     image_height: 200,
@@ -44,9 +44,10 @@ export const projects = [
   },
   {
     title: "Gemini AI Chatbot",
-    description: "Gemini AI, React, react-chatbot-kit, fuse.js. Hosted on Vercel.",
+    description:
+      "Gemini AI, React, react-chatbot-kit, fuse.js. Hosted on Vercel.",
     image: "/image/chatbot.png",
-    image_alt: "Porfolio",
+    image_alt: "Portfolio",
     image_height: 700,
     image_width: 700,
     link: "https://ai-chatbot-topaz-psi-70.vercel.app/",
@@ -60,6 +61,7 @@ export const projects = [
     image_height: 700,
     image_width: 700,
     link: "https://www.npmjs.com/package/fare-privy-core",
-    git_hub_link: "https://www.npmjs.com/package/fare-privy-core?activeTab=code",
+    git_hub_link:
+      "https://www.npmjs.com/package/fare-privy-core?activeTab=code",
   },
 ];
