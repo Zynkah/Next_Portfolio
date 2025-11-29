@@ -17,7 +17,7 @@ interface ProjectType {
 }
 
 const Section = ({ project }: { project: ProjectType }) => (
-  <motion.div className="relative w-full flex items-center justify-center h-[240px] overflow-hidden rounded-lg shadow-lg">
+  <motion.div className="relative w-full flex items-center justify-center h-[300px] overflow-hidden rounded-xl shadow-lg bg-card/80 border border-accent backdrop-blur-md">
     <Link
       href={project.link}
       aria-label={project.image_alt}
@@ -33,7 +33,7 @@ const Section = ({ project }: { project: ProjectType }) => (
         className="rounded-lg w-full object-cover hover:opacity-80 transition-opacity duration-300 ease-in-out "
       />
       {/* Overlay text */}
-      <div className="absolute inset-0 flex flex-col justify-center items-center px-8 py-6 bg-black/60 rounded-lg text-center">
+      <div className="absolute inset-0 flex flex-col justify-center items-center px-8 py-6 bg-black/60 rounded-xl text-center">
         <h2 className="text-3xl font-bold mb-2 text-white drop-shadow-lg">
           {project.title}
         </h2>
