@@ -16,14 +16,14 @@ interface ProjectType {
 }
 
 const Section = ({ project }: { project: ProjectType }) => (
-  <motion.div className="relative w-full flex items-center justify-center h-[300px] overflow-hidden rounded-xl shadow-lg bg-card/80 border border-accent backdrop-blur-md font-mulish">
+  <motion.div className="relative w-full flex items-center justify-center h-[300px] overflow-hidden rounded-xl shadow-lg bg-card/80 border border-accent backdrop-blur-md">
     <div className="block w-full hover:opacity-60 transition-opacity duration-300 ease-in-out relative">
       <Image
         src={project.image}
         width={project.image_width}
         height={project.image_height}
         alt={project.image_alt}
-        className="rounded-lg w-full object-cover hover:opacity-60 transition-opacity duration-300 ease-in-out "
+        className="rounded-lg w-full object-cover transition-opacity duration-300 ease-in-out "
       />
       {/* Overlay text */}
       <a
@@ -33,10 +33,10 @@ const Section = ({ project }: { project: ProjectType }) => (
         className="absolute inset-0 flex flex-col justify-center items-center px-8 py-6 bg-black/60 rounded-xl text-center"
         style={{ textDecoration: "none" }}
       >
-        <h2 className="text-4xl font-extrabold mb-2 text-white drop-shadow-lg tracking-wide font-mulish">
+        <h2 className="text-4xl font-extrabold mb-2 text-white drop-shadow-lg tracking-wide">
           {project.title}
         </h2>
-        <p className="text-lg leading-relaxed font-mulish text-white mb-4 drop-shadow-lg">
+        <p className="text-lg leading-relaxed text-white mb-4 drop-shadow-lg">
           {project.description}
         </p>
       </a>
@@ -46,7 +46,7 @@ const Section = ({ project }: { project: ProjectType }) => (
           target="_blank"
           rel="noopener noreferrer"
           aria-label={`${project.image_alt} on GitHub`}
-          className="text-cyan-300 underline font-bold tracking-wide font-mulish bg-black/70 px-3 py-1 rounded"
+          className="text-cyan-300 underline font-bold tracking-wide px-3 py-1 rounded"
         >
           GitHub Repository →
         </a>

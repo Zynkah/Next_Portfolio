@@ -4,12 +4,12 @@ export default function TechStack() {
   return (
     <Card className="min-w-[340px] max-w-full bg-card/80 border border-accent shadow-lg backdrop-blur-md rounded-xl flex flex-col justify-between overflow-auto">
       <CardHeader className="pb-2">
-        <CardTitle className="text-4xl font-extrabold tracking-wide text-primary drop-shadow-lg leading-tight font-mulish">
+        <CardTitle className="text-4xl font-extrabold tracking-wide text-primary drop-shadow-lg leading-tight">
           Tech Stack
         </CardTitle>
       </CardHeader>
       <CardContent className="flex-1 flex flex-col justify-between">
-        <ul className="space-y-2 text-pretty text-lg font-mulish">
+        <ul className="space-y-2 text-pretty text-lg">
           <li>
             <span className="text-accent font-semibold tracking-wide">
               Programming Languages:
