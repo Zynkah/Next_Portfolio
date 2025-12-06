@@ -18,16 +18,14 @@ interface ProjectType {
 
 const Section = ({ project }: { project: ProjectType }) => (
   <motion.div className="relative w-full flex items-center justify-center h-[300px] overflow-hidden rounded-xl shadow-lg bg-card/80 border border-accent backdrop-blur-md font-mulish">
-    <div
-      aria-label={project.image_alt}
-      className="block w-full hover:opacity-60 transition-opacity duration-300 ease-in-out"
-    >
+    <div className="block w-full hover:opacity-60 transition-opacity duration-300 ease-in-out">
+      {" "}
       <Image
         src={project.image}
         width={project.image_width}
         height={project.image_height}
         alt={project.image_alt}
-        className="rounded-lg w-full object-cover hover:opacity-80 transition-opacity duration-300 ease-in-out "
+        className="rounded-lg w-full object-cover hover:opacity-60 transition-opacity duration-300 ease-in-out "
       />
       {/* Overlay text */}
       <Link
@@ -46,7 +44,7 @@ const Section = ({ project }: { project: ProjectType }) => (
           href={project.git_hub_link}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label={project.image_alt}
+          aria-label={`${project.image_alt} on GitHub`}
           className="text-cyan-300 underline font-bold tracking-wide font-mulish"
         >
           GitHub Repository →
