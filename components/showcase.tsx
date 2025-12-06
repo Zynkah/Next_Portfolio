@@ -18,12 +18,9 @@ interface ProjectType {
 
 const Section = ({ project }: { project: ProjectType }) => (
   <motion.div className="relative w-full flex items-center justify-center h-[300px] overflow-hidden rounded-xl shadow-lg bg-card/80 border border-accent backdrop-blur-md font-mulish">
-    <Link
-      href={project.link}
+    <div
       aria-label={project.image_alt}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="block w-full"
+      className="block w-full hover:opacity-60 transition-opacity duration-300 ease-in-out"
     >
       <Image
         src={project.image}
@@ -33,7 +30,12 @@ const Section = ({ project }: { project: ProjectType }) => (
         className="rounded-lg w-full object-cover hover:opacity-80 transition-opacity duration-300 ease-in-out "
       />
       {/* Overlay text */}
-      <div className="absolute inset-0 flex flex-col justify-center items-center px-8 py-6 bg-black/60 rounded-xl text-center">
+      <Link
+        href={project.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="absolute inset-0 flex flex-col justify-center items-center px-8 py-6 bg-black/60 rounded-xl text-center"
+      >
         <h2 className="text-4xl font-extrabold mb-2 text-white drop-shadow-lg tracking-wide font-mulish">
           {project.title}
         </h2>
@@ -49,8 +51,8 @@ const Section = ({ project }: { project: ProjectType }) => (
         >
           GitHub Repository →
         </Link>
-      </div>
-    </Link>
+      </Link>
+    </div>
   </motion.div>
 );
 
