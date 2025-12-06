@@ -7,16 +7,13 @@ import Hero from "@/components/hero";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen flex flex-col items-center justify-between md:p-0 p-0">
-      <div className="sticky top-24 left-0 w-full z-20">
+    <main className="relative min-h-screen max-w-[1600px] m-auto flex flex-col items-center justify-between md:p-0 p-0">
+      <div className="w-full z-20 md:mt-10 mt-5">
         <Hero />
       </div>
 
-      <div className="w-full max-w-[1600px] flex justify-center">
-        <div
-          className="w-4/5 overflow-y-auto"
-          style={{ maxHeight: "calc(100vh - 400px)" }}
-        >
+      <div className="w-full flex justify-center mt-8 mb-16 px-2 sm:px-4 overflow-x-hidden">
+        <div className="w-full max-w-[1280px] px-2 sm:px-4">
           <p className="text-4xl font-thin my-4">About Me</p>
           <About />
           <div className="my-16">
