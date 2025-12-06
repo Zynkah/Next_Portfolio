@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Mulish } from "next/font/google";
+import { Quantico } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import AnimatedLayout from "@/components/animated-layout";
 
-const mulish = Mulish({ subsets: ["latin"] });
+const quantico = Quantico({ weight: ["400"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={mulish.className}>
+      <body className={quantico.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

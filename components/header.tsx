@@ -13,7 +13,6 @@ export default function Header() {
         >
           Zynkah
         </Link>
-        {/* Add more navigation links here if needed */}
       </nav>
       <div className="flex items-center gap-4">
         <ModeToggle />
