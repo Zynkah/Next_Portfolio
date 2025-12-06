@@ -40,7 +40,6 @@ export default function Hero() {
       />
       <AnimatePresence>
         <Card className="lg:w-full xl:max-w-[1280px] max-w-[900px] z-10 px-4 sm:px-8 md:px-12 lg:px-16 py-6 lg:py-8">
-          {" "}
           <motion.article
             initial="hidden"
             animate="visible"

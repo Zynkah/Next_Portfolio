@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function TechStack() {
   return (
-    <Card className="h-[400px] min-w-[340px] max-w-full bg-card/80 border border-accent shadow-lg backdrop-blur-md rounded-xl flex flex-col justify-between overflow-auto">
+    <Card className="min-w-[340px] max-w-full bg-card/80 border border-accent shadow-lg backdrop-blur-md rounded-xl flex flex-col justify-between overflow-auto">
       <CardHeader className="pb-2">
         <CardTitle className="text-4xl font-extrabold tracking-wide text-primary drop-shadow-lg leading-tight font-mulish">
           Tech Stack
