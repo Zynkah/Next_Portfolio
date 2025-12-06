@@ -12,7 +12,7 @@ export default function Home() {
         <Hero />
       </div>
 
-      <div className="w-full flex justify-center mt-8 mb-16 px-2 sm:px-4 overflow-x-hidden">
+      <div className="w-full flex justify-center mt-8 mb-16 overflow-x-hidden">
         <div className="w-full max-w-[1280px] px-2 sm:px-4">
           <p className="text-4xl font-thin my-4">About Me</p>
           <About />
