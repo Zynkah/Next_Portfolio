@@ -2,28 +2,22 @@
 
 import { projects } from "@/data/projects";
 import Image from "next/image";
-import { motion } from "framer-motion";
-
-interface ProjectType {
-  title: string;
-  description: string;
-  image: string;
-  image_alt: string;
-  image_height: number;
-  image_width: number;
-  link: string;
-  git_hub_link: string;
-}
+import { ProjectType } from "@/app/types/ProjectType";
 
 const Section = ({ project }: { project: ProjectType }) => (
-  <motion.div className="relative w-full flex items-center justify-center h-[300px] overflow-hidden rounded-xl shadow-lg bg-card/80 border border-accent backdrop-blur-md font-mulish">
-    <div className="block w-full hover:opacity-60 transition-opacity duration-300 ease-in-out relative">
+  <section
+    aria-label="Project Showcase"
+    role="region"
+    tabIndex={-1}
+    className="relative w-full flex items-center justify-center h-[300px] overflow-hidden rounded-xl shadow-lg bg-card/80 border border-accent backdrop-blur-md"
+  >
+    <article role="listitem" tabIndex={0} className="flex flex-col h-[300px] w-full hover:opacity-60 transition-opacity duration-300 ease-in-out relative">
       <Image
         src={project.image}
         width={project.image_width}
         height={project.image_height}
         alt={project.image_alt}
-        className="rounded-lg w-full object-cover hover:opacity-60 transition-opacity duration-300 ease-in-out "
+        className="w-full h-[250px] absolute  object-cover hover:opacity-60 transition-opacity duration-300 ease-in-out top-1/2 -translate-y-1/2"
       />
       {/* Overlay text */}
       <a
@@ -33,10 +27,10 @@ const Section = ({ project }: { project: ProjectType }) => (
         className="absolute inset-0 flex flex-col justify-center items-center px-8 py-6 bg-black/60 rounded-xl text-center"
         style={{ textDecoration: "none" }}
       >
-        <h2 className="text-4xl font-extrabold mb-2 text-white drop-shadow-lg tracking-wide font-mulish">
+        <h3 id={project.title} className="text-4xl font-extrabold mb-2 text-white drop-shadow-lg tracking-wide">
           {project.title}
-        </h2>
-        <p className="text-lg leading-relaxed font-mulish text-white mb-4 drop-shadow-lg">
+        </h3>
+        <p className="text-lg leading-relaxed  text-white mb-4 drop-shadow-lg">
           {project.description}
         </p>
       </a>
@@ -46,13 +40,13 @@ const Section = ({ project }: { project: ProjectType }) => (
           target="_blank"
           rel="noopener noreferrer"
           aria-label={`${project.image_alt} on GitHub`}
-          className="text-cyan-300 underline font-bold tracking-wide font-mulish bg-black/70 px-3 py-1 rounded"
+          className="text-cyan-300 underline font-bold tracking-wide hover:bg-black/70 px-3 py-1 rounded whitespace-nowrap"
         >
           GitHub Repository →
         </a>
       </div>
-    </div>
-  </motion.div>
+    </article>
+  </section>
 );
 
 export default function ProjectsCarousel() {
