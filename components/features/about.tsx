@@ -1,5 +1,5 @@
-import Bio from "./bio";
-import TechStack from "./tech-stack";
+import Bio from "../bio";
+import TechStack from "../tech-stack";
 
 export default function About() {
   return (
