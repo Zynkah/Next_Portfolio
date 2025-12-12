@@ -6,16 +6,12 @@ import { ProjectType } from "@/app/types/ProjectType";
 
 const Section = ({ project }: { project: ProjectType }) => (
   <section
-    aria-label="Project Showcase"
+    aria-label={`Project: ${project.title}`}
     role="region"
     tabIndex={-1}
     className="relative w-full flex items-center justify-center h-[300px] overflow-hidden rounded-xl shadow-lg bg-card/80 border border-accent backdrop-blur-md"
   >
-    <article
-      role="listitem"
-      tabIndex={0}
-      className="flex flex-col h-[300px] w-full hover:opacity-60 transition-opacity duration-300 ease-in-out relative"
-    >
+    <article className="flex flex-col h-[300px] w-full hover:opacity-60 transition-opacity duration-300 ease-in-out relative">
       <Image
         src={project.image}
         width={project.image_width}
@@ -32,11 +28,14 @@ const Section = ({ project }: { project: ProjectType }) => (
         style={{ textDecoration: "none" }}
       >
         <h3
-          id={project.title}
+          id={project.title
+            .toLowerCase()
+            .replace(/\s+/g, "-")
+            .replace(/[^a-z0-9-]/g, "")}
           className="text-4xl font-extrabold mb-2 text-white drop-shadow-lg tracking-wide"
         >
           {project.title}
-        </h3>
+        </h3>{" "}
         <p className="text-lg leading-relaxed  text-white mb-4 drop-shadow-lg">
           {project.description}
         </p>
