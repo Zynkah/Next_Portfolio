@@ -1,5 +1,5 @@
-import About from "@/components/about";
-import Blog from "@/components/blog-section";
+import About from "@/components/features/about";
+import Blog from "@/components/features/blog-section";
 import Certifications from "@/components/certifications";
 import ProjectsCarousel from "@/components/showcase";
 import AchivementsCarousel from "@/components/achievement-carousel";
