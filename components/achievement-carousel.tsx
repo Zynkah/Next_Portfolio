@@ -12,7 +12,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import useMeasure from "react-use-measure";
 
-export default function AchivementsCarousel() {
+export default function AchievementsCarousel() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   let [ref, { width }] = useMeasure();
@@ -30,8 +30,11 @@ export default function AchivementsCarousel() {
       repeatType: "loop",
       repeatDelay: 0,
     });
-  }, [xTranslation, width]);
 
+    return () => {
+      controls?.stop();
+    };
+  }, [xTranslation, width]);
   return (
     <Card className="relative max-w-full h-[300px] border-none shadow-lg backdrop-blur-md rounded-xl overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_25px,_black_calc(100%-25px),transparent_100%)]">
       <motion.div
@@ -60,7 +63,7 @@ export default function AchivementsCarousel() {
                       initial={{ y: 10 }}
                       animate={{ y: 0 }}
                       exit={{ y: 10 }}
-                      className="bg-white text-lg font-bold z-10 px-3 py-2 rounded-lg flex items-center gap-[0.5ch] hover tracking-wide"
+                      className="bg-white text-lg font-bold z-10 px-3 py-2 rounded-lg flex items-center gap-[0.5ch] tracking-wide"
                     >
                       <span className="text-primary-foreground text-wrap text-center">
                         {achievement.title}
@@ -74,7 +77,7 @@ export default function AchivementsCarousel() {
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 style={{ objectFit: "contain" }}
-                alt="logo placeholder"
+                alt={achievement.title}
               />
             </Card>
           </motion.div>
