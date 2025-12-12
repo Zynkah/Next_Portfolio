@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import AnimatedLayout from "@/components/animated-layout";
+import { Analytics } from "@vercel/analytics/next";
 
 const quantico = Quantico({ weight: ["400"], subsets: ["latin"] });
 
@@ -27,10 +28,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Analytics />
           <Header />
-          <AnimatedLayout>
-            {children}
-          </AnimatedLayout>
+          <AnimatedLayout>{children}</AnimatedLayout>
           <Footer />
         </ThemeProvider>
       </body>
