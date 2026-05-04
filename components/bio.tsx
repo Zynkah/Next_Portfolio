@@ -1,15 +1,9 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { bioData } from "@/data/BioData";
+import { CardContainer } from "./card-container";
 
 export default function Bio() {
   return (
-    <Card className="min-w-[340px] max-w-full bg-card/80 border border-accent shadow-lg backdrop-blur-md rounded-xl flex flex-col justify-between overflow-auto">
-      <CardHeader className="pb-2">
-        <CardTitle className="text-4xl font-extrabold tracking-wide text-primary drop-shadow-lg leading-tight">
-          {bioData.name}
-        </CardTitle>
-      </CardHeader>
-      <CardContent className="text-pretty flex-1 flex flex-col justify-between">
+    <CardContainer title="Bio">
         <div>
           <h3 className="text-accent text-xl font-semibold mb-1 tracking-wide">
             Summary
@@ -36,7 +30,6 @@ export default function Bio() {
             ))}
           </ul>
         </div>
-      </CardContent>
-    </Card>
+    </CardContainer>
   );
 }
