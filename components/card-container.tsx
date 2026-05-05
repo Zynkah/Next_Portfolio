@@ -15,10 +15,10 @@ export const CardContainer: React.FC<CardContainerProps> = ({
         <CardTitle className="text-4xl font-extrabold tracking-wide text-primary drop-shadow-lg leading-tight">
           {title}
         </CardTitle>
-        <CardContent className="text-pretty flex-1 flex flex-col justify-between">
-          {children}
-        </CardContent>
       </CardHeader>
+      <CardContent className="text-pretty flex-1 flex flex-col justify-between">
+        {children}
+      </CardContent>
     </Card>
   );
 };
