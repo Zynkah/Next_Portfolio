@@ -1,73 +1,40 @@
-import { CardContainer } from "./card-container";
+import { SectionHeading } from "./section-heading";
+import { techStack } from "@/data/tech-stack";
 
-export default function TechStack() {
+export function TechStack() {
   return (
-    <CardContainer title="Tech Stack">
-        <ul className="space-y-2 text-pretty text-lg">
-          <li>
-            <span className="text-accent font-semibold tracking-wide">
-              Programming Languages:
-            </span>
-            <br />
-            <span className="text-muted-foreground">
-              HTML, CSS, JavaScript, TypeScript, Python, SQL
-            </span>
-          </li>
-          <li>
-            <span className="text-accent font-semibold tracking-wide">
-              Frameworks:
-            </span>
-            <br />
-            <span className="text-muted-foreground">
-              React.js, Next.js, Three.js, React Native, Node.js
-            </span>
-          </li>
-          <li>
-            <span className="text-accent font-semibold tracking-wide">
-              Libraries:
-            </span>
-            <br />
-            <span className="text-muted-foreground">
-              Bootstrap, Material UI, Next UI, ShadCn, Daisy UI, Tailwind CSS
-            </span>
-          </li>
-          <li>
-            <span className="text-accent font-semibold tracking-wide">
-              Databases:
-            </span>
-            <br />
-            <span className="text-muted-foreground">
-              MongoDB, PostgreSQL, NeonDB, Drizzle ORM, Prisma
-            </span>
-          </li>
-          <li>
-            <span className="text-accent font-semibold tracking-wide">
-              DevOps:
-            </span>
-            <br />
-            <span className="text-muted-foreground">
-              AWS, Google Cloud, Microsoft Azure
-            </span>
-          </li>
-          <li>
-            <span className="text-accent font-semibold tracking-wide">
-              Tools:
-            </span>
-            <br />
-            <span className="text-muted-foreground">
-              Git, GitHub, VS Code, Docker, Postman, Insomnia
-            </span>
-          </li>
-          <li>
-            <span className="text-accent font-semibold tracking-wide">
-              Blockchain and Analytics:
-            </span>
-            <br />
-            <span className="text-muted-foreground">
-              Privy, WalletConnect, Biconomy, PostHog, Addressable
-            </span>
-          </li>
-        </ul>
-    </CardContainer>
+    <section
+      id="stack"
+      data-screen-label="Tech Stack"
+      className="mx-auto max-w-[1240px] px-8 py-[88px]"
+    >
+      <SectionHeading index="04" label="INVENTORY" square="var(--a3)" />
+      <h2 className="m-0 mb-9 font-pixel text-2xl text-retro-text">
+        TECH STACK
+      </h2>
+
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-[18px]">
+        {techStack.map((group) => (
+          <div
+            key={group.label}
+            className="rounded border border-retro-line bg-retro-surface p-[22px]"
+          >
+            <div className="mb-4 font-mono text-[11px] tracking-[2px] text-retro-a1">
+              {group.label}
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {group.items.map((item) => (
+                <span
+                  key={item}
+                  className="border border-retro-line bg-retro-surface2 px-[11px] py-1.5 font-mono text-xs text-retro-text"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }

@@ -1,38 +1,45 @@
 import type { Metadata } from "next";
-import { Quantico } from "next/font/google";
-import { ThemeProvider } from "@/components/theme-provider";
+import { Press_Start_2P, Space_Grotesk, Space_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
-import AnimatedLayout from "@/components/animated-layout";
-import { Analytics } from "@vercel/analytics/next";
+import { Providers } from "@/components/providers";
 
-const quantico = Quantico({ weight: ["400"], subsets: ["latin"] });
+const pixel = Press_Start_2P({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-press-start",
+  display: "swap",
+});
+const grotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-grotesk",
+  display: "swap",
+});
+const mono = Space_Mono({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--font-space-mono",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Zynkah portfolio",
+  title: "Zena Creps — Software Engineer",
+  description:
+    "Zynkah · Front-end focused Software Engineer. React, Next.js, Three.js & Web3.",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body className={quantico.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Analytics />
-          <Header />
-          <AnimatedLayout>{children}</AnimatedLayout>
-          <Footer />
-        </ThemeProvider>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${pixel.variable} ${grotesk.variable} ${mono.variable}`}
+    >
+      <body className="bg-retro-bg font-sans text-retro-text antialiased">
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
