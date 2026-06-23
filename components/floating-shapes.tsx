@@ -14,7 +14,7 @@ export const FloatingShapes = () => {
           animation: "float2 6s ease-in-out infinite",
           background: "var(--a1)",
         }}
-      />{" "}
+      />
     </>
   );
 };
