@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { useSound } from "./sound-provider";
+import { SynthwaveFloor } from "./synthwave-floor";
+import { FloatingShapes } from "./floating-shapes";
 
 export function Hero() {
   const { blip } = useSound();
@@ -11,24 +13,8 @@ export function Hero() {
       data-screen-label="Hero"
       className="relative mx-auto max-w-[1240px] overflow-hidden px-8 pb-24 pt-[72px]"
     >
-      {/* synthwave floor */}
-      <div
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-[220px] origin-bottom opacity-50"
-        style={{
-          backgroundImage:
-            "linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px)",
-          backgroundSize: "42px 42px",
-          transform: "perspective(320px) rotateX(62deg)",
-        }}
-      />
-      <div
-        className="pointer-events-none absolute right-[46%] top-[120px] h-[18px] w-[18px] bg-retro-a2"
-        style={{ animation: "float1 5s ease-in-out infinite" }}
-      />
-      <div
-        className="pointer-events-none absolute right-[8%] top-[300px] h-[14px] w-[14px] bg-retro-a1"
-        style={{ animation: "float2 6s ease-in-out infinite" }}
-      />
+      <SynthwaveFloor />
+      <FloatingShapes />
 
       <div className="relative z-[2] flex flex-wrap items-center gap-14">
         <div className="min-w-[320px] flex-1">
@@ -50,7 +36,7 @@ export function Hero() {
             <a
               href="#work"
               onMouseEnter={() => blip(640)}
-              className="bg-retro-a1 px-[26px] py-[15px] font-mono text-sm font-bold text-[#06121d] no-underline transition-transform hover:translate-x-[2px] hover:translate-y-[2px]"
+              className="bg-retro-a1 px-[26px] py-[15px] font-mono text-sm font-bold no-underline transition-transform hover:translate-x-[2px] hover:translate-y-[2px]"
               style={{ boxShadow: "5px 5px 0 var(--a3)" }}
             >
               ▶ VIEW WORK
