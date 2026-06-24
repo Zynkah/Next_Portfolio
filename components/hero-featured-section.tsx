@@ -1,8 +1,10 @@
 import Image from "next/image";
-import { useSound } from "./sound-provider";
 
-export const HeroFeaturedSection = () => {
-  const { blip } = useSound();
+interface HeroFeaturedSectionProps { 
+    blip: (arg: number) => void;
+}
+
+export const HeroFeaturedSection = ({ blip}: HeroFeaturedSectionProps) => {
 
   return (
     <div className="w-[380px] max-w-full flex-none">
