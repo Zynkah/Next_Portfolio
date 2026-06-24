@@ -1,6 +1,6 @@
 "use client";
 
-import { useSound } from "./sound-provider";
+import { useSound } from "../sound-provider";
 import { SynthwaveFloor } from "./synthwave-floor";
 import { FloatingShapes } from "./floating-shapes";
 import { HeroFeaturedSection } from "./hero-featured-section";
