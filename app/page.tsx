@@ -1,4 +1,4 @@
-import { SiteHeader } from "@/components/site-header";
+import { SiteHeader } from "@/components/Navbar/site-header";
 import { Hero } from "@/components/Hero";
 import { About } from "@/components/about";
 import { Experience } from "@/components/experience";

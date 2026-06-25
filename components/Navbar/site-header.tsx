@@ -2,7 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import { useSound } from "./sound-provider";
+import { useSound } from "../sound-provider";
+import { FloatingBox } from "./floating-box";
+import { ToggleMode } from "./toggle-mode";
 
 const links: [string, string][] = [
   ["work", "#work"],
@@ -26,10 +28,7 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-[1240px] items-center justify-between px-8 py-4">
         {/* logo */}
         <div className="flex items-center gap-3">
-          <div
-            className="h-4 w-4 bg-retro-a1"
-            style={{ boxShadow: "0 0 12px var(--glow)" }}
-          />
+          <FloatingBox />
           <div>
             <div className="font-pixel text-[13px] text-retro-text">ZYNKAH</div>
             <div className="mt-[3px] font-mono text-[10px] tracking-[1px] text-retro-muted">
@@ -53,29 +52,14 @@ export function SiteHeader() {
         </nav>
 
         {/* toggles */}
-        <div className="flex items-center gap-2.5">
-          <button
-            type="button"
-            onClick={() => {
-              toggle();
-              blip(700);
-            }}
-            className="cursor-pointer select-none border border-retro-line px-2.5 py-[7px] font-mono text-[11px] text-retro-muted transition-colors hover:border-retro-a2 hover:text-retro-a2"
-          >
-            {enabled ? "♪ ON" : "♪ OFF"}
-          </button>
-          <button
-            type="button"
-            aria-label="Toggle theme"
-            onClick={() => {
-              blip(400);
-              setTheme(theme === "dark" ? "light" : "dark");
-            }}
-            className="cursor-pointer select-none border border-retro-line px-3 py-1.5 font-mono text-[13px] text-retro-text transition-colors hover:border-retro-a1 hover:text-retro-a1"
-          >
-            {mounted ? (theme === "dark" ? "☀" : "☾") : "☀"} / ☾
-          </button>
-        </div>
+        <ToggleMode
+          blip={blip}
+          enabled={enabled}
+          theme={theme}
+          toggle={toggle}
+          setTheme={setTheme}
+          mounted={mounted}
+        />
       </div>
     </header>
   );
