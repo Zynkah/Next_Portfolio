@@ -5,7 +5,6 @@ export const FloatingShapes = () => {
         style={{
           animation: "bob 1.6s ease-in-out infinite",
           boxShadow: "0 0 14px var(--glow)",
-          background: "var(--a2)",
         }}
       />
     );
