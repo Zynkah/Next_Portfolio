@@ -5,14 +5,7 @@ import { useTheme } from "next-themes";
 import { useSound } from "../sound-provider";
 import { FloatingBox } from "./floating-box";
 import { ToggleMode } from "./toggle-mode";
-
-const links: [string, string][] = [
-  ["work", "#work"],
-  ["about", "#about"],
-  ["stack", "#stack"],
-  ["trophies", "#trophies"],
-  ["contact", "#contact"],
-];
+import { NavLinks } from "./nav-links";
 
 export function SiteHeader() {
   const { theme, setTheme } = useTheme();
@@ -38,18 +31,7 @@ export function SiteHeader() {
         </div>
 
         {/* nav */}
-        <nav className="hidden gap-7 font-mono text-[13px] text-retro-muted md:flex">
-          {links.map(([label, href]) => (
-            <a
-              key={href}
-              href={href}
-              onMouseEnter={() => blip(820)}
-              className="cursor-pointer no-underline transition-colors hover:text-retro-a1"
-            >
-              {label}
-            </a>
-          ))}
-        </nav>
+        <NavLinks blip={blip} />
 
         {/* toggles */}
         <ToggleMode
