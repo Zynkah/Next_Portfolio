@@ -1,11 +1,11 @@
 import Image from "next/image";
+import { FloatingShapes } from "./floating-shapes";
 
-interface HeroFeaturedSectionProps { 
-    blip: (arg: number) => void;
+interface HeroFeaturedSectionProps {
+  blip: (arg: number) => void;
 }
 
-export const HeroFeaturedSection = ({ blip}: HeroFeaturedSectionProps) => {
-
+export const HeroFeaturedSection = ({ blip }: HeroFeaturedSectionProps) => {
   return (
     <div className="w-[380px] max-w-full flex-none">
       <div
@@ -45,13 +45,7 @@ export const HeroFeaturedSection = ({ blip}: HeroFeaturedSectionProps) => {
         </a>
       </div>
       <div className="mt-4 flex justify-end">
-        <div
-          className="h-6 w-6 bg-retro-a2"
-          style={{
-            animation: "bob 1.6s ease-in-out infinite",
-            boxShadow: "0 0 14px var(--glow)",
-          }}
-        />
+        <FloatingShapes />
       </div>
     </div>
   );

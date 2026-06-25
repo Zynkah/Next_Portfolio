@@ -1,20 +1,12 @@
 export const FloatingShapes = () => {
-  return (
-    <>
+    return (
       <div
-        className="pointer-events-none absolute right-[46%] top-[120px] h-[18px] w-[18px] "
+        className="h-6 w-6 bg-retro-a2"
         style={{
-          animation: "float1 5s ease-in-out infinite",
+          animation: "bob 1.6s ease-in-out infinite",
+          boxShadow: "0 0 14px var(--glow)",
           background: "var(--a2)",
         }}
       />
-      <div
-        className="pointer-events-none absolute right-[8%] top-[300px] h-[14px] w-[14px]"
-        style={{
-          animation: "float2 6s ease-in-out infinite",
-          background: "var(--a1)",
-        }}
-      />
-    </>
-  );
-};
+    );
+}

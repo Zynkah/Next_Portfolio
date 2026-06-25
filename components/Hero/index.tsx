@@ -2,7 +2,7 @@
 
 import { useSound } from "../sound-provider";
 import { SynthwaveFloor } from "./synthwave-floor";
-import { FloatingShapes } from "./floating-shapes";
+import { SpinningShapes } from "./spinning-shapes";
 import { HeroFeaturedSection } from "./hero-featured-section";
 import { HeroMainContent } from "./hero-main-content";
 
@@ -15,7 +15,7 @@ export function Hero() {
       className="relative mx-auto max-w-[1240px] overflow-hidden px-8 pb-24 pt-[72px]"
     >
       <SynthwaveFloor />
-      <FloatingShapes />
+      <SpinningShapes />
 
       <div className="relative z-[2] flex flex-wrap items-center gap-14">
         {/* featured main content */}
