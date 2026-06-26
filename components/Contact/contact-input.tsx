@@ -15,6 +15,7 @@ interface ContactInputProps<T extends FieldValues> {
   labelClass?: string;
   inputClass?: string;
   errorClass?: string;
+  multiline?: boolean;
 }
 
 export const ContactInput = <T extends FieldValues>({
@@ -27,6 +28,7 @@ export const ContactInput = <T extends FieldValues>({
   labelClass,
   inputClass,
   errorClass,
+  multiline = false,
 }: ContactInputProps<T>) => {
   const error = errors[name];
 
@@ -35,13 +37,22 @@ export const ContactInput = <T extends FieldValues>({
       <label htmlFor={`cf-${name}`} className={labelClass}>
         {label}
       </label>
-      <input
-        id={`cf-${name}`}
-        type={type}
-        placeholder={placeholder}
-        className={inputClass}
-        {...register(name)}
-      />
+      {multiline ? (
+        <textarea
+          id={`cf-${name}`}
+          placeholder={placeholder}
+          className={inputClass}
+          {...register(name)}
+        />
+      ) : (
+        <input
+          id={`cf-${name}`}
+          type={type}
+          placeholder={placeholder}
+          className={inputClass}
+          {...register(name)}
+        />
+      )}
       {error?.message && (
         <p className={errorClass}>▸ {String(error.message)}</p>
       )}

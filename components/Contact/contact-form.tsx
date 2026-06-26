@@ -82,6 +82,7 @@ export function ContactForm() {
         <ContactInput
           label="MESSAGE"
           name="message"
+          multiline
           placeholder="Tell me about the project, role, or stream idea…"
           register={register}
           errors={errors}
