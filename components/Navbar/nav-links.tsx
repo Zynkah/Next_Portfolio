@@ -10,7 +10,7 @@ const links: [string, string][] = [
   ["contact", "#contact"],
 ];
 
-export const NavLinks = ({ blip}: NavLinksProps) => {
+export const NavLinks = ({ blip }: NavLinksProps) => {
   return (
     <nav className="hidden gap-7 font-mono text-[13px] text-retro-muted md:flex">
       {links.map(([label, href]) => (

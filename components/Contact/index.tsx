@@ -1,7 +1,17 @@
 "use client";
 
-import { useSound } from "./sound-provider";
+import { useSound } from "../sound-provider";
+import { ContactButton } from "./contact-button";
 import { ContactForm } from "./contact-form";
+
+const ContactLinks = [
+  { label: "▶ SEE ME CODE", href: "https://www.twitch.tv/Zynkah" },
+  { label: "GITHUB", href: "https://github.com/Zynkah" },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/zena-creps-ba3631232/",
+  },
+];
 
 export function Contact() {
   const { blip } = useSound();
@@ -38,34 +48,14 @@ export function Contact() {
             cameos. Drop a message or find me below — I reply fast.
           </p>
           <div className="flex flex-wrap gap-3.5">
-            <a
-              href="https://www.twitch.tv/Zynkah"
-              target="_blank"
-              rel="noopener noreferrer"
-              onMouseEnter={() => blip(640)}
-              className="bg-retro-a3 px-6 py-[15px] font-mono text-sm font-bold text-white no-underline transition-transform hover:translate-x-[2px] hover:translate-y-[2px]"
-              style={{ boxShadow: "5px 5px 0 var(--line)" }}
-            >
-              ▶ SEE ME CODE
-            </a>
-            <a
-              href="https://github.com/Zynkah"
-              target="_blank"
-              rel="noopener noreferrer"
-              onMouseEnter={() => blip(640)}
-              className="border-2 border-retro-line px-6 py-[13px] font-mono text-sm text-retro-text no-underline transition-colors hover:border-retro-a1 hover:text-retro-a1"
-            >
-              GITHUB
-            </a>
-            <a
-              href="https://www.linkedin.com/in/zena-creps-ba3631232/"
-              target="_blank"
-              rel="noopener noreferrer"
-              onMouseEnter={() => blip(640)}
-              className="border-2 border-retro-line px-6 py-[13px] font-mono text-sm text-retro-text no-underline transition-colors hover:border-retro-a2 hover:text-retro-a2"
-            >
-              LINKEDIN
-            </a>
+            {ContactLinks.map((link) => (
+              <ContactButton
+                key={link.label}
+                blip={blip}
+                label={link.label}
+                href={link.href}
+              />
+            ))}
           </div>
         </div>
 

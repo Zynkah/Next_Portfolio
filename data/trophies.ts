@@ -4,7 +4,7 @@ export interface Trophy {
   kind: "CERTIFICATION" | "ACHIEVEMENT";
 }
 
-export const certifications: Trophy[] = [
+const certifications: Trophy[] = [
   {
     title: "Full Stack Web & Mobile",
     image: "/image/FullStack.png",
@@ -17,7 +17,7 @@ export const certifications: Trophy[] = [
   },
 ];
 
-export const achievements: Trophy[] = [
+const achievements: Trophy[] = [
   {
     title: "Importing & Cleaning Data",
     image: "/image/data_in_python.png",

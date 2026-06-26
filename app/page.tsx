@@ -5,7 +5,7 @@ import { Experience } from "@/components/experience";
 import { Showcase } from "@/components/showcase";
 import { TechStack } from "@/components/tech-stack";
 import { Trophies } from "@/components/trophies";
-import { Contact } from "@/components/contact";
+import { Contact } from "@/components/Contact";
 import { SiteFooter } from "@/components/site-footer";
 import { Reveal } from "@/components/reveal";
 
