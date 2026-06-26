@@ -12,14 +12,7 @@ import { Reveal } from "@/components/reveal";
 export default function Home() {
   return (
     <div className="relative min-h-screen overflow-x-hidden">
-      {/* global scanline overlay */}
-      <div
-        className="pointer-events-none fixed inset-0 z-[90] mix-blend-multiply"
-        style={{
-          background:
-            "repeating-linear-gradient(0deg, var(--scan) 0px, var(--scan) 1px, transparent 1px, transparent 3px)",
-        }}
-      />
+      <div className="pointer-events-none fixed inset-0 z-[90] mix-blend-multiply" />
       <SiteHeader />
       <main>
         <Reveal>
