@@ -9,7 +9,7 @@ export function SiteFooter() {
           1UP <span className="text-retro-text">ZENA CREPS</span>
         </span>
         <span>© 2026 · BUILT WITH ▲ &amp; CAFFEINE</span>
-        <span className="text-retro-a1">HI 999999</span>
+        <span className="text-retro-a1">HP 999999</span>
       </div>
     </footer>
   );

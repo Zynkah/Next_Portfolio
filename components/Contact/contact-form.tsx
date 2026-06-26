@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -12,37 +12,24 @@ import { ContactInput } from "./contact-input";
 
 type Values = z.infer<typeof schema>;
 
-type ContactForm = {
-  email: string;
-  password: string;
-  username: string;
-};
-
 export function ContactForm() {
   const { blip } = useSound();
   const [sent, setSent] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
   const {
     register,
     handleSubmit,
-    reset,
     formState: { errors, isSubmitting },
   } = useForm<Values>({
     resolver: zodResolver(schema),
     defaultValues: { email: "", subject: "", message: "" },
   });
 
-  const onSubmit = (values: Values) => {
-    // No backend — open the visitor's mail client with everything pre-filled.
-    const body = `${values.message}\n\n— Reply to: ${values.email}`;
-    const href = `mailto:${TO_EMAIL}?subject=${encodeURIComponent(
-      values.subject,
-    )}&body=${encodeURIComponent(body)}`;
-    window.location.href = href;
+  const onSubmit = () => {
     blip(720);
     setSent(true);
-    reset();
-    setTimeout(() => setSent(false), 4500);
+    formRef.current?.submit(); // native submit after RHF validation passes
   };
 
   return (
@@ -58,12 +45,24 @@ export function ContactForm() {
         DIRECT MESSAGE
       </div>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+      <form
+        ref={formRef}
+        action={`https://formsubmit.co/${TO_EMAIL}`}
+        method="POST"
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleSubmit(onSubmit)(e);
+        }}
+        className="space-y-4"
+      >
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="table" />
+
         <ContactInput
-          label="Email"
+          label="EMAIL"
           name="email"
           type="email"
-          placeholder="you@example.com"
+          placeholder="email@example.com"
           register={register}
           errors={errors}
           labelClass={labelClass}
@@ -71,7 +70,7 @@ export function ContactForm() {
           errorClass={errorClass}
         />
         <ContactInput
-          label="Subject"
+          label="SUBJECT"
           name="subject"
           placeholder="Let's work together"
           register={register}
@@ -80,22 +79,16 @@ export function ContactForm() {
           inputClass={inputClass}
           errorClass={errorClass}
         />
-
-        <div>
-          <label htmlFor="cf-message" className={labelClass}>
-            MESSAGE
-          </label>
-          <textarea
-            id="cf-message"
-            rows={5}
-            placeholder="Tell me about the project, role, or stream idea…"
-            className={`${inputClass} resize-none`}
-            {...register("message")}
-          />
-          {errors.message && (
-            <p className={errorClass}>▸ {errors.message.message}</p>
-          )}
-        </div>
+        <ContactInput
+          label="MESSAGE"
+          name="message"
+          placeholder="Tell me about the project, role, or stream idea…"
+          register={register}
+          errors={errors}
+          labelClass={labelClass}
+          inputClass={inputClass}
+          errorClass={errorClass}
+        />
 
         <SubmitButton isSubmitting={isSubmitting} sent={sent} blip={blip} />
       </form>
